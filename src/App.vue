@@ -1,3 +1,8 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -13,46 +18,7 @@
   </header>
 
   <RouterView />
-  <div v-for="(item,i) in users" key="user-${i}">{{item}}</div>
 </template>
-
-<script>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    RouterLink,
-    RouterView
-  },
-  data() {
-    return {
-      users: [],
-      resp: {
-        // config,
-        // data,
-        // headers,
-        // request,
-        // status,
-        // statusText
-      }
-    }
-  },
-  methods: {
-    async getUsers() {
-      const { data } = await this.axios.get(
-        "card"
-      );
-      this.users = data;
-      console.log('this.users=>',JSON.parse(JSON.stringify(this.users)));
-    }
-  },
-  async mounted() {
-    this.getUsers();
-  }
-}
-</script>
 
 <style scoped>
 header {
@@ -116,8 +82,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
-
-<style lang="scss">
-@import "@/scss/styles.scss";
 </style>

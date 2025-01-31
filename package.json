@@ -1,7 +1,7 @@
 {
-  "name": "deutsche-learn",
+  "name": "deutsch-vue",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,18 +10,17 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@vueuse/firebase": "^10.9.0",
-    "axios": "^1.6.7",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
-    "firebase": "^10.8.1",
-    "vue": "^3.4.15",
-    "vue-axios": "^3.5.2",
-    "vue-router": "^4.2.5",
-    "vuex": "^4.0.2"
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.3",
-    "sass": "^1.71.1",
-    "vite": "^5.0.11"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.11",
+    "vite-plugin-vue-devtools": "^7.7.0"
   }
 }
